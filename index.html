@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="imgs/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><img src="imgs/logo.png" alt="Logo" class="logo"></h1>
+    </header>
+
+    <main>
+        <div class="text-boxes">
+            <section class="input-box">
+                <textarea id="input-text" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="warning">
+                    <img src="imgs/advertencia.png" alt="Advertencia">
+                    <label>Solo letras minúsculas, sin caracteres especiales o tildes.</label>
+                </div>
+                <div class="buttons">
+                    <button id="encrypt-button" onclick="encryptText()">Encriptar</button>
+                    <button id="decrypt-button" onclick="decryptText()">Desencriptar</button>
+                </div>
+            </section>
+            <section class="output-box">
+                <div id="output-container">
+                    <img src="imgs/muñeco.png" alt="Placeholder" id="placeholder">
+                    <p id="output-text">Ningún mensaje fue encontrado</p>
+                    <p id="suggestion">Ingresa el texto que desees encriptar o desencriptar</p>
+                    <button id="copy-button" onclick="copyText()" style="display: none;">Copiar</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <img src="imgs/logo.png" alt="Logo" class="footer-logo">
+        <p>Desarrollado por &copy; Guillermo Anthoni Calderon Montes</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
